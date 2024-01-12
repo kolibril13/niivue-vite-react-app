@@ -1,8 +1,6 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { Niivue } from "@niivue/niivue";
 
 const NiiVue = ({ imageUrl }) => {
@@ -19,23 +17,21 @@ const NiiVue = ({ imageUrl }) => {
   }, [imageUrl]);
 
   return (
-    <canvas 
-      ref={canvas} 
-      height={100} 
-      width={100} 
-      style={{ position: 'absolute', top: 0, left: 0 }} 
+    <canvas
+      ref={canvas}
+      height={100}
+      width={100}
+      style={{ position: "absolute", top: 0, left: 0 }}
     />
-  );};
-
-// use as:
+  );
+};
 
 function App() {
   return (
     <>
       <NiiVue
         imageUrl={"https://niivue.github.io/niivue-demo-images/mni152.nii.gz"}
-      >
-      </NiiVue>
+      ></NiiVue>
     </>
   );
 }
