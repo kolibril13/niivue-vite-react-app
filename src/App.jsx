@@ -18,8 +18,14 @@ const NiiVue = ({ imageUrl }) => {
     nv.loadVolumes(volumeList);
   }, [imageUrl]);
 
-  return <canvas ref={canvas} height={480} width={640} />;
-};
+  return (
+    <canvas 
+      ref={canvas} 
+      height={100} 
+      width={100} 
+      style={{ position: 'absolute', top: 0, left: 0 }} 
+    />
+  );};
 
 // use as:
 
@@ -29,7 +35,6 @@ function App() {
       <NiiVue
         imageUrl={"https://niivue.github.io/niivue-demo-images/mni152.nii.gz"}
       >
-        {" "}
       </NiiVue>
     </>
   );
